@@ -3,150 +3,178 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Correa - Performance Wear</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+<title>CORREA - Performance Wear</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
 
 <style>
 
-body {
+/* RESET */
+
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #ffffff;
+    background: #ffffff;
     color: #000;
 }
 
 /* HEADER */
 
 header {
-    padding: 30px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 30px 8%;
     font-weight: 900;
-    font-size: 24px;
-    letter-spacing: 3px;
-    text-align: center;
-}
-
-/* HERO CON IMAGEN */
-
-.hero {
-    position: relative;
-    height: 100vh;
-    background-image: url("hero-correa.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    font-size: 22px;
+    letter-spacing: 4px;
+    z-index: 10;
     color: white;
 }
 
-/* Overlay oscuro */
+/* HERO */
 
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.45);
+.hero {
+    height: 100vh;
+    background: linear-gradient(to right, rgba(0,0,0,0.75) 40%, rgba(0,0,0,0.2) 70%), 
+                url("hero-correa.jpg") no-repeat center right;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    color: white;
 }
 
-/* Contenido encima del overlay */
-
 .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-    padding: 20px;
+    max-width: 550px;
 }
 
 .hero h1 {
-    font-size: 52px;
+    font-size: 56px;
     font-weight: 900;
-    margin-bottom: 15px;
-    letter-spacing: 2px;
+    line-height: 1.05;
+    margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 20px;
-    margin-bottom: 25px;
+    font-size: 18px;
+    margin-bottom: 35px;
+    font-weight: 400;
+    color: #e5e5e5;
 }
 
-.button {
+.hero-btn {
     display: inline-block;
-    padding: 14px 35px;
-    background: white;
-    color: black;
+    padding: 14px 32px;
+    background: #000;
+    color: #fff;
     text-decoration: none;
     font-weight: 700;
-    border-radius: 5px;
-    transition: 0.3s;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
 }
 
-.button:hover {
-    opacity: 0.85;
+.hero-btn:hover {
+    background: #333;
 }
 
-/* PRODUCTOS */
+/* PRODUCTS SECTION */
+
+.products-section {
+    padding: 120px 8%;
+}
+
+.products-title {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 60px;
+    text-align: center;
+    letter-spacing: 2px;
+}
 
 .products {
-    padding: 100px 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 40px;
 }
 
 .product {
     text-align: center;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    padding: 20px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.product:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
 }
 
 .product img {
     width: 100%;
-    max-height: 240px;
+    height: 280px;
     object-fit: contain;
-    border-radius: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
 }
 
 .product h3 {
-    margin-top: 10px;
-    font-size: 16px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.product a {
+    display: inline-block;
+    padding: 10px 22px;
+    background: #000;
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.product a:hover {
+    background: #333;
+}
+
+.product:hover img {
+    transform: scale(1.05);
 }
 
 /* FOOTER */
 
 footer {
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 20px;
+    background: #f4f4f4;
     font-size: 14px;
-    background-color: #f5f5f5;
+    letter-spacing: 1px;
 }
 
 /* RESPONSIVE */
 
 @media (max-width: 768px) {
 
+    header {
+        padding: 25px 6%;
+        font-size: 18px;
+    }
+
+    .hero {
+        padding: 0 6%;
+        background-position: center;
+    }
+
     .hero h1 {
         font-size: 34px;
     }
 
     .hero p {
-        font-size: 16px;
+        font-size: 15px;
     }
 
-    .button {
-        padding: 12px 25px;
-        font-size: 14px;
+    .products-section {
+        padding: 80px 6%;
     }
 
 }
@@ -162,66 +190,74 @@ CORREA
 
 <section class="hero">
     <div class="hero-content">
-        <h1>DISCIPLINA. INTENSIDAD. IDENTIDAD.</h1>
-        <p>Performance wear diseñada para entrenar sin límites.</p>
-        <a href="https://instagram.com/CORREA.URB" class="button">VER INSTAGRAM</a>
+        <h1>
+            DISCIPLINA.<br>
+            INTENSIDAD.<br>
+            IDENTIDAD.
+        </h1>
+        <p>Construí tu mejor versión.</p>
+        <a href="#productos" class="hero-btn">EMPEZAR HOY</a>
     </div>
 </section>
 
-<section class="products">
-    
-    <div class="product">
-        <img src="remera-compresion-neutral.jpg">
-        <h3>Remera de Compresión Neutral</h3>
-        <a href="https://instagram.com/CORREA.URB" class="button">VER EN INSTAGRAM</a>
-    </div>
+<section class="products-section" id="productos">
+    <h2 class="products-title">COLECCIÓN ACTUAL</h2>
 
-    <div class="product">
-        <img src="6FEF88F4-9273-4D9F-BD15-07FB2BEDEE4D.png">
-        <h3>Sweat Guard - Negro</h3>
-        <a href="https://instagram.com/CORREA.URB" class="button">VER EN INSTAGRAM</a>
-    </div>
+    <div class="products">
 
-    <div class="product">
-        <img src="7FBCE4FB-44A7-4BEE-B318-0A702570D076.png">
-        <h3>Sweat Guard - Rojo</h3>
-        <a href="https://instagram.com/CORREA.URB" class="button">VER EN INSTAGRAM</a>
-    </div>
+        <div class="product">
+            <img src="remera-compresion-neutral.jpg">
+            <h3>Remera de Compresión Neutral</h3>
+            <a href="https://instagram.com/CORREA.URB">VER EN INSTAGRAM</a>
+        </div>
 
-    <div class="product">
-        <img src="CB929568-7251-420D-BB1A-64815535F525.png">
-        <h3>Sweat Guard - Blanco</h3>
-        <a href="https://instagram.com/CORREA.URB" class="button">VER EN INSTAGRAM</a>
-    </div>
+        <div class="product">
+            <img src="6FEF88F4-9273-4D9F-BD15-07FB2BEDEE4D.png">
+            <h3>Sweat Guard - Negro</h3>
+            <a href="https://instagram.com/CORREA.URB">VER EN INSTAGRAM</a>
+        </div>
 
-    <div class="product">
-        <img src="0CFBE765-2954-4041-9A1B-0BED64FC9785.png">
-        <h3>Sweat Guard - Azul</h3>
-        <a href="https://instagram.com/CORREA.URB" class="button">VER EN INSTAGRAM</a>
-    </div>
+        <div class="product">
+            <img src="7FBCE4FB-44A7-4BEE-B318-0A702570D076.png">
+            <h3>Sweat Guard - Rojo</h3>
+            <a href="https://instagram.com/CORREA.URB">VER EN INSTAGRAM</a>
+        </div>
 
-    <div class="product">
-        <img src="Boxer-negro.jpg">
-        <h3>Boxer Correa Negro</h3>
-        <a href="https://instagram.com/CORREA.URB" class="button">VER EN INSTAGRAM</a>
-    </div>
+        <div class="product">
+            <img src="CB929568-7251-420D-BB1A-64815535F525.png">
+            <h3>Sweat Guard - Blanco</h3>
+            <a href="https://instagram.com/CORREA.URB">VER EN INSTAGRAM</a>
+        </div>
 
-    <div class="product">
-        <img src="boxer-verde.jpg">
-        <h3>Boxer Correa Verde</h3>
-        <a href="https://instagram.com/CORREA.URB" class="button">VER EN INSTAGRAM</a>
-    </div>
+        <div class="product">
+            <img src="0CFBE765-2954-4041-9A1B-0BED64FC9785.png">
+            <h3>Sweat Guard - Azul</h3>
+            <a href="https://instagram.com/CORREA.URB">VER EN INSTAGRAM</a>
+        </div>
 
-    <div class="product">
-        <img src="Boxer-camuflado.jpg">
-        <h3>Boxer Correa Camuflado</h3>
-        <a href="https://instagram.com/CORREA.URB" class="button">VER EN INSTAGRAM</a>
-    </div>
+        <div class="product">
+            <img src="Boxer-negro.jpg">
+            <h3>Boxer Correa Negro</h3>
+            <a href="https://instagram.com/CORREA.URB">VER EN INSTAGRAM</a>
+        </div>
 
+        <div class="product">
+            <img src="boxer-verde.jpg">
+            <h3>Boxer Correa Verde</h3>
+            <a href="https://instagram.com/CORREA.URB">VER EN INSTAGRAM</a>
+        </div>
+
+        <div class="product">
+            <img src="Boxer-camuflado.jpg">
+            <h3>Boxer Correa Camuflado</h3>
+            <a href="https://instagram.com/CORREA.URB">VER EN INSTAGRAM</a>
+        </div>
+
+    </div>
 </section>
 
 <footer>
-Hecho para los que entrenan en serio.<br>
+Hecho para los que entrenan en serio.<br><br>
 © 2026 CORREA
 </footer>
 
