@@ -10,7 +10,6 @@
 <style>
 
 /* RESET */
-
 * {
     margin: 0;
     padding: 0;
@@ -23,18 +22,27 @@ body {
     color: #000;
 }
 
-/* HEADER */
+/* NAVBAR */
 
-header {
-    position: absolute;
+.navbar {
+    position: fixed;
     top: 0;
     width: 100%;
-    padding: 30px 8%;
-    font-weight: 900;
-    font-size: 22px;
-    letter-spacing: 4px;
-    z-index: 10;
-    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px);
+}
+
+.logo img {
+    height: 38px;
 }
 
 /* HERO */
@@ -83,7 +91,7 @@ header {
     background: #333;
 }
 
-/* PRODUCTS SECTION */
+/* PRODUCTS */
 
 .products-section {
     padding: 120px 8%;
@@ -155,9 +163,12 @@ footer {
 
 @media (max-width: 768px) {
 
-    header {
-        padding: 25px 6%;
-        font-size: 18px;
+    .navbar {
+        padding: 15px 6%;
+    }
+
+    .logo img {
+        height: 30px;
     }
 
     .hero {
@@ -176,7 +187,6 @@ footer {
     .products-section {
         padding: 80px 6%;
     }
-
 }
 
 </style>
@@ -184,9 +194,11 @@ footer {
 
 <body>
 
-<header>
-CORREA
-</header>
+<nav class="navbar" id="navbar">
+    <div class="logo">
+        <img src="correa-logo.png" alt="CORREA Logo">
+    </div>
+</nav>
 
 <section class="hero">
     <div class="hero-content">
@@ -260,6 +272,13 @@ CORREA
 Hecho para los que entrenan en serio.<br><br>
 © 2026 CORREA
 </footer>
+
+<script>
+window.addEventListener("scroll", function() {
+    const navbar = document.getElementById("navbar");
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+</script>
 
 </body>
 </html>
