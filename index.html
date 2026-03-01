@@ -37,7 +37,7 @@ body {
 }
 
 .navbar.scrolled {
-    background: rgba(0,0,0,0.85);
+    background: rgba(0,0,0,0.9);
     backdrop-filter: blur(8px);
 }
 
@@ -49,7 +49,7 @@ body {
 
 .hero {
     height: 100vh;
-    background: linear-gradient(to right, rgba(0,0,0,0.75) 40%, rgba(0,0,0,0.2) 70%), 
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 40%, rgba(0,0,0,0.3) 70%), 
                 url("hero-correa.jpg") no-repeat center right;
     background-size: cover;
     display: flex;
@@ -146,6 +146,51 @@ body {
 }
 
 .product:hover img {
+    transform: scale(1.07);
+}
+
+/* CTA FINAL */
+
+.cta-section {
+    text-align: center;
+    padding: 100px 20px;
+    background: #000;
+    color: white;
+}
+
+.cta-section h2 {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.cta-section a {
+    display: inline-block;
+    padding: 14px 30px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* WHATSAPP FLOAT */
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    z-index: 999;
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
     transform: scale(1.05);
 }
 
@@ -153,7 +198,7 @@ body {
 
 footer {
     text-align: center;
-    padding: 80px 20px;
+    padding: 60px 20px;
     background: #f4f4f4;
     font-size: 14px;
     letter-spacing: 1px;
@@ -207,8 +252,8 @@ footer {
             INTENSIDAD.<br>
             IDENTIDAD.
         </h1>
-        <p>Construí tu mejor versión.</p>
-        <a href="#productos" class="hero-btn">EMPEZAR HOY</a>
+        <p>Entrená con carácter. Vestí con identidad.</p>
+        <a href="#productos" class="hero-btn">VER COLECCIÓN</a>
     </div>
 </section>
 
@@ -220,58 +265,66 @@ footer {
         <div class="product">
             <img src="remera-compresion-neutral.jpg">
             <h3>Remera de Compresión Neutral</h3>
-            <a href="https://instagram.com/CORREA.URB">VER EN INSTAGRAM</a>
+            <a href="https://instagram.com/CORREA.URB" target="_blank">VER EN INSTAGRAM</a>
         </div>
 
         <div class="product">
             <img src="6FEF88F4-9273-4D9F-BD15-07FB2BEDEE4D.png">
             <h3>Sweat Guard - Negro</h3>
-            <a href="https://instagram.com/CORREA.URB">VER EN INSTAGRAM</a>
+            <a href="https://instagram.com/CORREA.URB" target="_blank">VER EN INSTAGRAM</a>
         </div>
 
         <div class="product">
             <img src="7FBCE4FB-44A7-4BEE-B318-0A702570D076.png">
             <h3>Sweat Guard - Rojo</h3>
-            <a href="https://instagram.com/CORREA.URB">VER EN INSTAGRAM</a>
+            <a href="https://instagram.com/CORREA.URB" target="_blank">VER EN INSTAGRAM</a>
         </div>
 
         <div class="product">
             <img src="CB929568-7251-420D-BB1A-64815535F525.png">
             <h3>Sweat Guard - Blanco</h3>
-            <a href="https://instagram.com/CORREA.URB">VER EN INSTAGRAM</a>
+            <a href="https://instagram.com/CORREA.URB" target="_blank">VER EN INSTAGRAM</a>
         </div>
 
         <div class="product">
             <img src="0CFBE765-2954-4041-9A1B-0BED64FC9785.png">
             <h3>Sweat Guard - Azul</h3>
-            <a href="https://instagram.com/CORREA.URB">VER EN INSTAGRAM</a>
+            <a href="https://instagram.com/CORREA.URB" target="_blank">VER EN INSTAGRAM</a>
         </div>
 
         <div class="product">
             <img src="Boxer-negro.jpg">
             <h3>Boxer Correa Negro</h3>
-            <a href="https://instagram.com/CORREA.URB">VER EN INSTAGRAM</a>
+            <a href="https://instagram.com/CORREA.URB" target="_blank">VER EN INSTAGRAM</a>
         </div>
 
         <div class="product">
             <img src="boxer-verde.jpg">
             <h3>Boxer Correa Verde</h3>
-            <a href="https://instagram.com/CORREA.URB">VER EN INSTAGRAM</a>
+            <a href="https://instagram.com/CORREA.URB" target="_blank">VER EN INSTAGRAM</a>
         </div>
 
         <div class="product">
             <img src="Boxer-camuflado.jpg">
             <h3>Boxer Correa Camuflado</h3>
-            <a href="https://instagram.com/CORREA.URB">VER EN INSTAGRAM</a>
+            <a href="https://instagram.com/CORREA.URB" target="_blank">VER EN INSTAGRAM</a>
         </div>
 
     </div>
 </section>
 
+<section class="cta-section">
+    <h2>HECHO PARA LOS QUE ENTRENAN EN SERIO</h2>
+    <a href="https://instagram.com/CORREA.URB" target="_blank">IR A INSTAGRAM</a>
+</section>
+
 <footer>
-Hecho para los que entrenan en serio.<br><br>
 © 2026 CORREA
 </footer>
+
+<a class="whatsapp-btn" href="https://wa.me/5491136585629?text=Hola%20quiero%20informaci%C3%B3n%20sobre%20los%20productos%20Correa" target="_blank">
+WHATSAPP
+</a>
 
 <script>
 window.addEventListener("scroll", function() {
